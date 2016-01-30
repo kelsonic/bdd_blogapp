@@ -9,10 +9,10 @@ class ArticlesController < ApplicationController
   def create
     @article = Article.new(article_params)
     if @article.save
-      flash[:success] = "Article has been created"
+      flash[:success] = "Your article was created successfully."
       redirect_to articles_path
     else
-      flash[:danger] = "Article has not been created."
+      flash.now[:danger] = "Your article was not created."
       render :new
     end
   end
