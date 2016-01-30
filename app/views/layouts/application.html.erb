@@ -8,7 +8,15 @@
 </head>
 <body>
 
-<%= yield %>
+  <%= render 'layouts/navbar' %>
+  
+  <%= render 'laouts/messages' %>
+
+  <%= yield %>
+  
+  <%= yield :sidebar %>
+  
+  <%= render 'layouts/footer' %>
 
 </body>
 </html>
