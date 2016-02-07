@@ -1,20 +1,21 @@
-require 'rails_helper'
+require "rails_helper"
 
-RSpec.feature "Users login" do
+RSpec.feature "Signing out logged-in users" do
   
   before do
     @john = User.create!(email: "john@example.com", password: "password")
-  end
-  
-  scenario "with valid credentials" do
     visit '/'
     
     click_link "Login"
     fill_in "Email", with: @john.email
     fill_in "Password", with: @john.password
     click_button "Login"
-    
-    expect(page).to have_content("Signed in successfully")
+  end
+  
+  scenario "log out a user" do
+    visit "/"
+    click_link "Logout"
+    expect(page).to have_content("Signed out successfully")
   end
   
 end

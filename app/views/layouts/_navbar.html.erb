@@ -30,7 +30,7 @@
               <li><%= link_to 'My Profile', '#' %></li>
               <li><%= link_to 'Edit Profile', '#' %></li>
               <li role="separator" class="divider"></li>
-              <li><%= link_to 'Logout', '#', class: "logout" %></li>
+              <li><%= link_to 'Logout', destroy_user_session_path, method: :delete, class: "logout" %></li>
             </ul>
           </li>
           
