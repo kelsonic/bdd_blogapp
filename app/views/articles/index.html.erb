@@ -4,7 +4,9 @@
       
       <div class="text-center">
         <h1>Listing all articles</h1>
-        <%= link_to "New Article", new_article_path, class: "btn btn-success btn-lg", id: "new-article-btn" %>
+        <% if user_signed_in? %>
+          <%= link_to "New Article", new_article_path, class: "btn btn-success btn-lg", id: "new-article-btn" %>
+        <% end %>
       </div>
       
       <% @articles.each do |article| %>
