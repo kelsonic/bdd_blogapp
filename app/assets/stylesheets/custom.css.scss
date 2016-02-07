@@ -11,7 +11,7 @@
 
 body {
   background-color: #1f4788;
-  color: white;
+  color: #999;
 }
 
 .article-title, .article-body {
@@ -74,6 +74,10 @@ body {
   text-align: center;
 }
 
+.author {
+  font-style: italic;
+  padding-top: 15px;
+}
 // Navbar
 .navbar {
   border-bottom: 1px solid #999;
