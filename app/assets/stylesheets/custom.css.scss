@@ -9,6 +9,12 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+h1 {
+  color: white;
+  padding-bottom: 20px;
+  font-size: 4em;
+}
+
 body {
   background-color: #1f4788;
   color: #999;
@@ -44,6 +50,10 @@ body {
 
 .btn-space {
   margin-top: 20px;
+}
+
+.messages {
+  padding-top: 20px;
 }
 
 .alert-error {
@@ -104,4 +114,12 @@ nav.navbar.navbar-default {
 #logo_intext {
   color: #2800a0; //Color1
   font-weight: bold;
+}
+
+.logout {
+  background-color: #ff9999;
+  border: 1px solid #ff6666;
+  &:hover {
+    background-color: #ff6666;
+  }
 }
