@@ -3,15 +3,19 @@ class CommentsController < ApplicationController
   before_action :set_article
   
   def create
-    @comment = @article.comments.build(comment_params)
-    @comment.user = current_user
-    
-    if @comment.save
-      flash[:success] = "Comment was created successfully."
+    unless current_user
+      flash[:danger] = "Please login or sign up first."
+      redirect_to new_user_session_path
     else
-      flash.now[:danger] = "Comment was not created."
+      @comment = @article.comments.build(comment_params)
+      @comment.user = current_user
+      if @comment.save
+        flash[:success] = "Comment was created successfully."
+      else
+        flash.now[:danger] = "Comment was not created."
+      end
+      redirect_to article_path(@article)
     end
-    redirect_to article_path(@article)
   end
   
   private

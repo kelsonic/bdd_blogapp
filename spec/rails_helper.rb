@@ -4,6 +4,7 @@ require 'spec_helper'
 require File.expand_path('../../config/environment', __FILE__)
 require 'rspec/rails'
 include Warden::Test::Helpers
+include Devise::TestHelpers
 Warden.test_mode!
 # Add additional requires below this line. Rails is not loaded until this point!
 
