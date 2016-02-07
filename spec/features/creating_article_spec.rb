@@ -13,10 +13,10 @@ RSpec.feature "Creating Articles" do
     click_link "New Article"
     
     fill_in "Title", with: "Creating first article"
-    fill_in "Body", with: "Lorem Ipsum"
+    fill_in "Body", with: "Lorem Ipsum and this must be at least 10 characters long"
     click_button "Create Article"
     
-    expect(page).to have_content("Your article was created successfully.")
+    expect(page).to have_content("Your article was created successfully")
     expect(page.current_path).to eq(articles_path)
     expect(page).to have_content("Created by #{@john.first_name}")
   end
