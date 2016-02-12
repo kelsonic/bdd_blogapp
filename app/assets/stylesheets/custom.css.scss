@@ -32,7 +32,7 @@ body {
 
 .article-body {
   font-size: 1.5em;
-  color: black;
+  color: white;
 }
 
 #new-article-btn {
@@ -94,11 +94,13 @@ body {
 }
 
 .comment-body {
-  font-size: 2em;
+  font-size: 1em;
+  color: white;
 }
 
 .comment-time {
   font-style: italic;
+  font-size: 0.7em;
 }
 // Navbar
 .navbar {
