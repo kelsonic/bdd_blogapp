@@ -4,8 +4,8 @@
       <article class="detail-article text-center">
         <h1 class="article-detail-title"><%= @article.title %></h1>
         
-        <div class="glyphicon glyphicon-calendar" id="article-date">
-          <%= @article.created_at.strftime("%b %d, %Y") %>
+        <div id="article-date" class="white-text">
+          <i class="glyphicon glyphicon-calendar"></i><%= @article.created_at.strftime(" %b %d, %Y") %>
         </div>
         
         <div class="article-body">
@@ -47,7 +47,7 @@
           <!--New Comment Body-->
           <div class='form-group'>
             <div class='control-label col-md-2'>
-              <%= f.label :body, 'New Comment' %>
+              <%= f.label :body, 'New Comment', class: "white-text" %>
             </div>
             <div class='col-md-10'>
               <%= f.text_area :body, rows: 10, class: 'form-control', placeholder: 'Your comment' %>
