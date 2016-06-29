@@ -1,3 +1,5 @@
+# Techify
+
 ![Techify](https://github.com/kelsonic/techify/blob/master/app/assets/images/readme-image.jpg)
 
 Join the open forum for tech questions from technical professionals. This app was built to better learn both Behavior Driven Development (BDD) and Capybara.
